@@ -1,4 +1,4 @@
-mib: ECS2100-MIB
+mib: ECS4510-MIB:ECS2100-MIB:ECS4120-MIB
 modules:
     sensors:
         dbm:
@@ -15,23 +15,3 @@ modules:
                     num_oid: '.1.3.6.1.4.1.259.10.1.45.1.2.11.1.6.{{ $index }}'
                     descr: 'Port{{ $index }} Rx'
                     index: 'portOpticalMonitoringInfoRxPower.{{ $index }}'
-
-
-mib: ECS4120-MIB
-modules:
-    sensors:
-        dbm:
-            data:
-                -
-                    oid: portOpticalMonitoringInfoTable
-                    value: portOpticalMonitoringInfoTxPower
-                    num_oid: '.1.3.6.1.4.1.259.10.1.45.1.2.11.1.5.{{ $index }}'
-                    descr: 'Port{{ $index }} Tx'
-                    index: 'portOpticalMonitoringInfoTxPower.{{ $index }}'
-                -
-                    oid: portOpticalMonitoringInfoTable
-                    value: portOpticalMonitoringInfoRxPower
-                    num_oid: '.1.3.6.1.4.1.259.10.1.45.1.2.11.1.6.{{ $index }}'
-                    descr: 'Port{{ $index }} Rx'
-                    index: 'portOpticalMonitoringInfoRxPower.{{ $index }}'
-
