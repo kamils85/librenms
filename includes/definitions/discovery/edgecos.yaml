@@ -1,4 +1,4 @@
-mib: ECS4510-MIB:ECS4120-MIB:ECS2100-MIB
+mib: ECS4510-MIB:ECS2100-MIB:ECS4120-MIB
 modules:
     sensors:
         dbm:
